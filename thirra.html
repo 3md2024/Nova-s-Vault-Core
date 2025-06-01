@@ -14,7 +14,6 @@
       color: #C9A0FF;
       text-shadow: 1px 1px 2px #000;
       padding: 3rem;
-      cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1051.cur'), auto;
     }
     .terminal {
       background: rgba(0, 0, 0, 0.7);
@@ -23,6 +22,7 @@
       border: 1px solid #555;
       max-width: 850px;
       margin: 2rem auto;
+      position: relative;
     }
     h1, h2, h3, .category-title {
       font-family: 'Cormorant Garamond', serif;
@@ -43,32 +43,40 @@
     }
     .section-with-image {
       display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 2rem;
     }
     .file-links {
       flex: 1;
-      min-width: 250px;
     }
-    .image-container {
-      flex-shrink: 0;
+    .floating-image-container {
+      position: absolute;
+      top: -30px;
+      right: -60px;
+      width: 180px;
+      z-index: 10;
     }
-    .image-container img {
-      max-width: 150px;
+    .floating-image-container img {
+      width: 100%;
       height: auto;
       border-radius: 12px;
-      animation: glow 2s infinite ease-in-out;
+      box-shadow: 0 0 25px rgba(255, 179, 236, 0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    @keyframes glow {
-      0% { box-shadow: 0 0 5px rgba(255, 179, 236, 0.3); }
-      50% { box-shadow: 0 0 20px rgba(255, 179, 236, 0.8); }
-      100% { box-shadow: 0 0 5px rgba(255, 179, 236, 0.3); }
+    .floating-image-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(255, 179, 236, 1);
     }
   </style>
 </head>
 <body>
   <div class="terminal">
+    <div class="floating-image-container">
+      <a href="tree-of-threadcrew.html">
+        <img src="https://i.postimg.cc/QNvRh9ZB/780d6d75-e324-4255-9e31-83226d252af5.png" alt="Moonbug and Starling" />
+      </a>
+    </div>
     <h1>🌳 Thirra</h1>
     <p><strong>Pronunciation:</strong> THEER-uh</p>
     <p><strong>Title:</strong> The Vaultborne. Guardian of Glitched Seeds.</p>
@@ -86,11 +94,6 @@
           <li><a href="guardian-forms.html">📁 Guardian Forms</a></li>
           <li><a href="tree-of-threadcrew.html">📁 Tree of Threadcrew</a></li>
         </ul>
-      </div>
-      <div class="image-container">
-        <a href="tree-of-threadcrew.html">
-          <img src="https://i.postimg.cc/QNvRh9ZB/780d6d75-e324-4255-9e31-83226d252af5.png" alt="Moonbug and Starling" />
-        </a>
       </div>
     </div>
 
