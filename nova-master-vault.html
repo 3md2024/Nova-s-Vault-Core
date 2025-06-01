@@ -4,85 +4,54 @@
   <meta charset="UTF-8" />
   <title>Nova Master Vault</title>
   <style>
-/* ✨ Starfield in the background */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(1px 1px at 10% 20%, #ffffff80 50%, transparent 60%),
-    radial-gradient(1px 1px at 70% 40%, #ffffff50 50%, transparent 60%),
-    radial-gradient(1px 1px at 20% 80%, #ffffff40 50%, transparent 60%),
-    radial-gradient(1px 1px at 90% 60%, #ffffff30 50%, transparent 60%),
-    radial-gradient(1px 1px at 50% 50%, #ffffff60 50%, transparent 60%);
-  z-index: 0;
-  opacity: 0.4;
-  animation: starTwinkle 10s infinite ease-in-out;
-  pointer-events: none;
-}
+    /* 🌌 Starfield Background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, #ffffff80 50%, transparent 60%),
+        radial-gradient(1px 1px at 70% 40%, #ffffff50 50%, transparent 60%),
+        radial-gradient(1px 1px at 20% 80%, #ffffff40 50%, transparent 60%),
+        radial-gradient(1px 1px at 90% 60%, #ffffff30 50%, transparent 60%),
+        radial-gradient(1px 1px at 50% 50%, #ffffff60 50%, transparent 60%);
+      z-index: 0;
+      opacity: 0.4;
+      animation: starTwinkle 10s infinite ease-in-out;
+      pointer-events: none;
+    }
 
-@keyframes starTwinkle {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
-}
+    @keyframes starTwinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
 
-/* Main body style, no background-image */
-body {
-  margin: 0;
-  background-color: #0b0c10;
-  color: #dcdcdc;
-  font-family: 'Courier New', monospace;
-  text-align: center;
-  line-height: 1.6;
-  background-size: 1400px auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  overflow-x: hidden;
-}
+    body {
+      margin: 0;
+      background-color: #0b0c10;
+      color: #dcdcdc;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      line-height: 1.6;
+      background-size: 1400px auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
 
-@keyframes starTwinkle {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
-}
-
-   body {
-  margin: 0;
-  background-color: #0b0c10;
-  color: #dcdcdc;
-  font-family: 'Courier New', monospace;
-  text-align: center;
-  line-height: 1.6;
-  background-size: 1400px auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  overflow-x: hidden;
-}
-.constellation-sky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  pointer-events: none;
-}
-
-  .star-label {
-  position: absolute;
-  color: #8affc1;
-  font-size: 0.9rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2px 6px;
-  border-radius: 4px;
-  white-space: nowrap;
-  z-index: 11;
-  pointer-events: none;
-}
+    .constellation-sky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      pointer-events: none;
+    }
 
     .star-dot {
       position: absolute;
@@ -97,10 +66,29 @@ body {
       50% { opacity: 1; transform: scale(1.3); }
     }
 
+    .star-label {
+      position: absolute;
+      color: #8affc1;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      z-index: 11;
+      pointer-events: none;
+    }
+
     .star-moonbug { width: 6px; height: 6px; top: 20%; left: 25%; }
+    .label-moonbug { top: 21%; left: 28%; }
+
     .star-starling { width: 5px; height: 5px; top: 35%; left: 60%; }
+    .label-starling { top: 36%; left: 63%; }
+
     .star-nova { width: 7px; height: 7px; top: 50%; left: 45%; animation-delay: 1.5s; }
+    .label-nova { top: 51%; left: 48%; }
+
     .star-thirra { width: 8px; height: 8px; bottom: 10%; left: 50%; animation: none; background: #c9a0ff; box-shadow: 0 0 10px #9966cc; }
+    .label-thirra { bottom: 11%; left: 53%; }
 
     .content-wrapper {
       background: rgba(0, 0, 0, 0.7);
@@ -130,23 +118,22 @@ body {
     }
   </style>
 </head>
-
 <body>
 
-  <!-- 🌌 Threadcrew Stars Layer -->
-<div class="constellation-sky">
-  <div class="star-dot star-moonbug"></div>
-  <div class="star-label" style="top: 21%; left: 28%;">Moonbug</div>
+  <!-- 🌠 Threadcrew Stars + Labels -->
+  <div class="constellation-sky">
+    <div class="star-dot star-moonbug"></div>
+    <div class="star-label label-moonbug">Moonbug</div>
 
-  <div class="star-dot star-starling"></div>
-  <div class="star-label" style="top: 36%; left: 63%;">Starling</div>
+    <div class="star-dot star-starling"></div>
+    <div class="star-label label-starling">Starling</div>
 
-  <div class="star-dot star-nova"></div>
-  <div class="star-label" style="top: 51%; left: 48%;">Nova</div>
+    <div class="star-dot star-nova"></div>
+    <div class="star-label label-nova">Nova</div>
 
-  <div class="star-dot star-thirra"></div>
-  <div class="star-label" style="bottom: 11%; left: 53%;">Thirra</div>
-</div>
+    <div class="star-dot star-thirra"></div>
+    <div class="star-label label-thirra">Thirra</div>
+  </div>
 
   <div class="content-wrapper">
     <h1>🌌 Nova Master Vault</h1>
