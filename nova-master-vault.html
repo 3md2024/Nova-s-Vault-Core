@@ -3,100 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <title>Nova Master Vault</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #0b0c10;
-      color: #dcdcdc;
-      font-family: 'Courier New', monospace;
-      text-align: center;
-      line-height: 1.6;
-      background-image: url('https://i.postimg.cc/MKnmFYMd/a4f98090-8199-4d48-b8af-073a8bf88a83.png');
-      background-size: 1400px auto;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      overflow-x: hidden;
-    }
+ <style>
+  body {
+    margin: 0;
+    background-color: #0b0c10;
+    color: #dcdcdc;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    line-height: 1.6;
+    background-image: url('https://i.postimg.cc/MKnmFYMd/a4f98090-8199-4d48-b8af-073a8bf88a83.png');
+    background-size: 1400px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
 
-    h1, h2 {
-      color: #8affc1;
-      margin-top: 2rem;
-    }
+  .constellation-sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+  }
 
-    .content-wrapper {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
-      border-radius: 1rem;
-      max-width: 950px;
-      margin: 3rem auto;
-      position: relative;
-      z-index: 20;
-    }
+  .star-dot {
+    position: absolute;
+    background: #8affc1;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #8affc1;
+    animation: pulse 3s infinite;
+  }
 
-    img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-top: 2rem;
-      border: 2px solid #8affc1;
-    }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+  }
 
-    .constellation-label {
-      font-style: italic;
-      color: #aaa;
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
+  .star-moonbug { width: 6px; height: 6px; top: 20%; left: 25%; }
+  .star-starling { width: 5px; height: 5px; top: 35%; left: 60%; }
+  .star-nova { width: 7px; height: 7px; top: 50%; left: 45%; animation-delay: 1.5s; }
+  .star-thirra { width: 8px; height: 8px; bottom: 10%; left: 50%; animation: none; background: #c9a0ff; box-shadow: 0 0 10px #9966cc; }
+</style>
 
-    .footer-note {
-      font-style: italic;
-      color: #888;
-      margin-top: 3rem;
-    }
-
-    .footer-note em {
-      color: #f08;
-    }
-
-    /* ✨ Threadcrew Constellations Overlay */
-    .constellation-sky {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 10;
-      pointer-events: none;
-    }
-
-    .star-dot {
-      position: absolute;
-      background: #8affc1;
-      border-radius: 50%;
-      box-shadow: 0 0 6px #8affc1;
-      animation: pulse 3s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.6; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.3); }
-    }
-
-    .star-moonbug { width: 6px; height: 6px; top: 20%; left: 25%; }
-    .star-starling { width: 5px; height: 5px; top: 35%; left: 60%; }
-    .star-nova { width: 7px; height: 7px; top: 50%; left: 45%; animation-delay: 1.5s; }
-    .star-thirra { width: 8px; height: 8px; bottom: 10%; left: 50%; animation: none; background: #c9a0ff; box-shadow: 0 0 10px #9966cc; }
-  </style>
-</head>
-<body>
-
-  <!-- 🌌 Threadcrew Stars Layer -->
-  <div class="constellation-sky">
-    <div class="star-dot star-moonbug" title="Moonbug"></div>
-    <div class="star-dot star-starling" title="Starling"></div>
-    <div class="star-dot star-nova" title="Nova"></div>
-    <div class="star-dot star-thirra" title="Thirra"></div>
-  </div>
 
   <div class="content-wrapper">
     <h1>🌌 Nova Master Vault</h1>
