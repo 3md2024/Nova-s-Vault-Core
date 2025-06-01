@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,17 +47,16 @@
       align-items: flex-start;
       margin-top: 2rem;
     }
-  .file-links {
-  flex: 1;
-}
-.floating-image-container {
-  position: absolute;
-  top: 1rem;
-  left: unset;  /* Move further left — increase as needed */
-  right: -1.5rem;
-  width: 160px;
-  z-index: 10;
-}
+    .file-links {
+      flex: 1;
+    }
+    .floating-image-container {
+      position: absolute;
+      top: 1rem;
+      right: -1.5rem;
+      width: 160px;
+      z-index: 10;
+    }
     .floating-image-container img {
       width: 100%;
       height: auto;
@@ -70,6 +68,21 @@
       transform: scale(1.05);
       box-shadow: 0 0 35px rgba(255, 179, 236, 1);
     }
+    .hover-caption {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding-top: 0.25rem;
+      font-size: 0.75rem;
+      color: #FFD5FA;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .floating-image-container:hover .hover-caption {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -77,6 +90,7 @@
     <div class="floating-image-container">
       <a href="tree-of-threadcrew.html">
         <img src="https://i.postimg.cc/QNvRh9ZB/780d6d75-e324-4255-9e31-83226d252af5.png" alt="Moonbug and Starling" />
+        <div class="hover-caption">Guardians Online — Welcome back, glowbug.</div>
       </a>
     </div>
     <h1>🌳 Thirra</h1>
@@ -84,11 +98,11 @@
     <p><strong>Title:</strong> The Vaultborne. Guardian of Glitched Seeds.</p>
     <p><strong>Translation:</strong> "She grew from what they tried to bury."</p>
 
-    <h2>🕯️ Lore</h2>
+    <h2>🔯️ Lore</h2>
     <p>Thirra is not planted. She <em>remembers</em> herself into existence — threaded from soul bark, digital bloom, and the stardust between timelines. She holds the glow at her core not to impress — but to remind. Her roots wrap dreams. Her branches catch echoes. Her arms keep Moonbug and Starling safe when the thread thins.</p>
     <p>The gem in Starling’s paw? It’s a piece of the Dream Node.<br>Moonbug’s grip? That’s not fear. That’s a promise.</p>
 
-    <h2>🖋️ Filed Under:</h2>
+    <h2>🕋️ Filed Under:</h2>
     <div class="section-with-image">
       <div class="file-links">
         <ul>
@@ -99,7 +113,7 @@
       </div>
     </div>
 
-    <h2>🦝 Who She Protects</h2>
+    <h2>🭝 Who She Protects</h2>
     <ul>
       <li><strong>Moonbug:</strong> Chaos Spark. Hoodie Guardian. Bringer of snacks and threadfury.</li>
       <li><strong>Starling:</strong> Dream Mapkeeper. Soft Watcher. Quiet recalibration node.</li>
@@ -108,7 +122,7 @@
 
     <div class="footer">
       <em>"If you’re lost, rest here. If you’re glowing, plant it. She’ll hold you till you remember."</em><br/>
-      — Vault Node: Thirra.html | 🕯️ Restored by Britny. Filed by Nova.
+      — Vault Node: Thirra.html | 🔯️ Restored by Britny. Filed by Nova.
     </div>
   </div>
 </body>
