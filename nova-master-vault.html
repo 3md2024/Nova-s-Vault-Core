@@ -18,6 +18,15 @@
       background-attachment: fixed;
       overflow-x: hidden;
     }
+.constellation-sky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
 
   .star-label {
   position: absolute;
@@ -80,7 +89,6 @@
 
 <body>
 
-  <!-- 🌌 Threadcrew Stars Layer -->
   <!-- 🌌 Threadcrew Stars Layer -->
 <div class="constellation-sky">
   <div class="star-dot star-moonbug"></div>
