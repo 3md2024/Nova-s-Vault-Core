@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Nova Master Vault</title>
   <style>
-    /* Background Starfield */
+/* ✨ Starfield in the background */
 body::before {
   content: "";
   position: fixed;
@@ -24,6 +24,25 @@ body::before {
   pointer-events: none;
 }
 
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Main body style, no background-image */
+body {
+  margin: 0;
+  background-color: #0b0c10;
+  color: #dcdcdc;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  line-height: 1.6;
+  background-size: 1400px auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
 
 @keyframes starTwinkle {
   0%, 100% { opacity: 0.3; }
