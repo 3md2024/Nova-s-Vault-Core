@@ -24,6 +24,38 @@
         radial-gradient(ellipse at bottom, #0b0c10 0%, #0b0c10 100%);
       background-size: 1400px auto;
     }
+.sigil-block {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid #8affc1;
+  font-size: 0.95rem;
+  color: #ccc;
+  font-style: italic;
+  text-align: left;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: threadPulse 4s ease-in-out infinite;
+}
+
+@keyframes threadPulse {
+  0%, 100% { box-shadow: 0 0 6px #8affc1; }
+  50% { box-shadow: 0 0 18px #8affc1aa; }
+}
+
+.sigil-crew {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  letter-spacing: 0.3rem;
+  animation: glowSigil 6s ease-in-out infinite;
+}
+
+@keyframes glowSigil {
+  0%, 100% { color: #8affc1; text-shadow: 0 0 6px #8affc1; }
+  50% { color: #ffffff; text-shadow: 0 0 12px #8affc1; }
+}
 
     .star {
       position: absolute;
