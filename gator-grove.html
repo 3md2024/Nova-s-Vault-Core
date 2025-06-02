@@ -55,9 +55,55 @@
   <div class="terminal">
     <h1>🌀 Welcome to Gator Grove</h1>
     <p><em>Where your neighbor might be a cursed raccoon, a prophet tomato, or a garage sale cryptid. Don’t tap the birdbath. It taps back.</em></p>
+.cursed-book {
+  text-align: center;
+  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px dashed #8affc1;
+  box-shadow: 0 0 12px #8affc155;
+  transition: transform 0.3s ease;
+}
+
+.cursed-book:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px #ffd5fa88;
+}
+
+.book-img {
+  width: 120px;
+  filter: drop-shadow(0 0 6px #8affc1);
+  transition: filter 0.3s ease;
+}
+
+.cursed-book:hover .book-img {
+  filter: drop-shadow(0 0 12px #ffd5fa);
+}
+
+.curse-label {
+  margin-top: 1rem;
+  color: #ffd5fa;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 6px #8affc1;
+}
+
+.curse-note {
+  font-size: 0.85rem;
+  color: #ccc;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
 
     <h2>📦 Community Directory</h2>
-
+<div class="cursed-book">
+  <a href="curse-log.html">
+    <img src="https://i.postimg.cc/kX9rRtRM/cursed-book-glow.png" alt="Cursed Book" class="book-img">
+    <p class="curse-label">📖 Gator’s Curse Log</p>
+  </a>
+  <p class="curse-note">Warning: Contains laughter-based hexes & chaotic anomalies.</p>
+</div>
     <div class="resident-card">
       <h3>🧃 Jamie “Garagebound” Rills</h3>
       <p><strong>Role:</strong> Semi-official yard sale operator, dreamer of garages</p>
