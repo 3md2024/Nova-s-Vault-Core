@@ -13,14 +13,22 @@ body::before {
   height: 100%;
   background-color: transparent;
   background-image:
-    radial-gradient(2px 2px at 20% 30%, #ffffff60 60%, transparent 80%),
-    radial-gradient(2px 2px at 70% 70%, #8affc1a0 60%, transparent 80%),
-    radial-gradient(1px 1px at 50% 50%, #8affc1 70%, transparent 80%);
-  animation: starGlow 15s ease-in-out infinite;
+    radial-gradient(2px 2px at 15% 25%, #ffffff70 70%, transparent 80%),
+    radial-gradient(2px 2px at 75% 65%, #8affc170 70%, transparent 80%),
+    radial-gradient(2px 2px at 50% 50%, #ffffff50 70%, transparent 80%);
+  animation: starGlow 12s ease-in-out infinite;
   opacity: 0.3;
   z-index: 0;
+  transform-origin: center;
   pointer-events: none;
 }
+
+@keyframes starGlow {
+  0%   { transform: translateY(0) scale(1); }
+  50%  { transform: translateY(-10px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
 
 @keyframes starGlow {
   0%   { transform: translateY(0) scale(1); opacity: 0.2; }
