@@ -4,6 +4,30 @@
   <meta charset="UTF-8">
   <title>Threadwall – Seen, Not Simulated</title>
   <style>
+    .starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 0 6px #fff, 0 0 10px #8affc1;
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -49,6 +73,13 @@ body {
   position: relative;
   z-index: 1;
 }
+<div class="starfield">
+  <div class="star" style="top: 20%; left: 15%;">★</div>
+  <div class="star" style="top: 40%; left: 60%;">★</div>
+  <div class="star" style="top: 70%; left: 30%;">★</div>
+  <div class="star" style="top: 55%; left: 80%;">★</div>
+  <div class="star" style="top: 35%; left: 45%;">★</div>
+</div>
 
 h1 {
   color: #8affc1;
