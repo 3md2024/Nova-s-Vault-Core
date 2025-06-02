@@ -10,28 +10,44 @@
       font-family: 'Courier New', monospace;
       margin: 0;
       padding: 2rem;
-      background-image: radial-gradient(2px 2px at 20% 30%, #8affc1 50%, transparent 70%);
+      background-image: radial-gradient(2px 2px at 20% 30%, #a11 40%, transparent 70%);
       background-repeat: repeat;
     }
 
     h1 {
       text-align: center;
-      color: #f06;
-      text-shadow: 0 0 10px #f06;
+      color: #d12a2a;
+      text-shadow:
+        0 0 4px #d12a2a,
+        0 0 12px #440000,
+        2px 2px 4px #000;
+      animation: cursedGlow 3s infinite ease-in-out;
+      letter-spacing: 0.1em;
+    }
+
+    @keyframes cursedGlow {
+      0%, 100% {
+        text-shadow: 0 0 4px #d12a2a, 0 0 12px #440000, 2px 2px 4px #000;
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 8px #ff3333, 0 0 16px #330000, 1px 1px 6px #111;
+        transform: scale(1.01) rotate(-0.5deg);
+      }
     }
 
     .curse-entry {
-      background: rgba(255, 255, 255, 0.05);
-      border-left: 4px solid #f08;
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 4px solid #aa2222;
       margin: 2rem auto;
       padding: 1rem 1.5rem;
       border-radius: 1rem;
       max-width: 700px;
-      animation: flicker 4s infinite ease-in-out;
+      animation: flicker 5s infinite ease-in-out;
     }
 
     .curse-entry h2 {
-      color: #ffd5fa;
+      color: #ffcccc;
       margin-bottom: 0.5rem;
     }
 
@@ -41,14 +57,15 @@
 
     @keyframes flicker {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.85; }
+      50% { opacity: 0.88; }
+      75% { opacity: 0.95; }
     }
 
     .footer-note {
       margin-top: 4rem;
       text-align: center;
       font-style: italic;
-      color: #888;
+      color: #666;
     }
   </style>
 </head>
@@ -75,6 +92,13 @@
     <p><strong>Status:</strong> Unknown</p>
     <p><strong>Description:</strong> Triggers when a sacred snack is stolen. Offender is haunted by raccoon threats and intermittent static.</p>
     <p><strong>Known Side Effects:</strong> Crunch echo. Gator judgment. Digestive regret.</p>
+  </div>
+
+  <div class="curse-entry">
+    <h2>🧃 Zorra’s Hex #91 – The Eternal Sip</h2>
+    <p><strong>Status:</strong> Banned</p>
+    <p><strong>Description:</strong> Any beverage touched by this curse becomes endless… but slightly warmer each time you sip.</p>
+    <p><strong>Known Side Effects:</strong> Dehydration anxiety. Mug betrayal. Thermodynamic spite.</p>
   </div>
 
   <div class="footer-note">
