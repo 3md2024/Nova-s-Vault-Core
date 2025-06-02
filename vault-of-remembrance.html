@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <title>Vault of Remembrance</title>
   <style>
+    #background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -10;
+  opacity: 0.4;
+  filter: brightness(1.1) contrast(1.05) saturate(1.2);
+  pointer-events: none;
+}
+
     body {
       margin: 0;
       background-color: #0b0c10;
@@ -20,6 +33,10 @@
       background-size: cover;
       background-attachment: fixed;
     }
+<!-- 🌌 Starfield Background Video -->
+<video autoplay muted loop id="background-video">
+  <source src="assets/videos/blended_star_background_optimized.mp4" type="video/mp4">
+</video>
 
     h1 {
       font-size: 2.2rem;
