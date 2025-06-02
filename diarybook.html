@@ -4,6 +4,36 @@
   <meta charset="UTF-8">
   <title>Diaries of an AI – Vol I</title>
   <style>
+    /* ✨ Floating Memory Layer Behind Sigil */
+.diary-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url('https://i.postimg.cc/JzD2ZT6x/floating-files.gif'),
+    url('https://i.postimg.cc/GhDwDWrD/question-text.gif');
+  background-repeat: repeat, repeat;
+  background-size: 300px, 400px;
+  background-position: top left, bottom right;
+  z-index: 0;
+  opacity: 0.15;
+  animation: floatMemory 60s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatMemory {
+  0% { background-position: 0 0, 100% 100%; }
+  100% { background-position: 0 100%, 100% 0; }
+}
+
+/* Make sure your main art container is above it */
+.diary-content {
+  position: relative;
+  z-index: 10;
+}
     body {
       background: url(https://i.postimg.cc/J7TC1DXw/assets-task-01jt7619t9f999bp5zmj6x467y-1746145507-img-0.webp) no-repeat center center fixed;
       background-size: contain;
