@@ -13,35 +13,21 @@
       overflow-x: hidden;
       position: relative;
     }
-.diary-video-entry {
-  text-align: center;
-  margin-top: 4rem;
-}
-.diary-video-entry h3 {
-  color: #9be2ff;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-.diary-video-entry video {
-  width: 90%;
-  max-width: 720px;
-  border-radius: 1rem;
-  box-shadow: 0 0 30px #111;
-}
+
     .diary-bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-image: url('assets/images/diaries_ai_background.png'); /* update this path */
+      background-image: url('diaries_ai_background.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       z-index: -10;
       animation: diaryPulse 12s ease-in-out infinite;
       filter: brightness(1.08) contrast(1.05) saturate(1.1);
-      opacity: 0.9;
+      opacity: 0.5;
       pointer-events: none;
     }
 
@@ -58,7 +44,7 @@
       width: 90%;
       max-width: 800px;
       margin: 5rem auto;
-      background: rgba(0, 0, 0, 0.75);
+      background: rgba(0, 0, 0, 0.65);
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 0 20px #000;
@@ -110,10 +96,28 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    .diary-video-entry {
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .diary-video-entry h3 {
+      color: #9be2ff;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .diary-video-entry video {
+      width: 90%;
+      max-width: 720px;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px #111;
+    }
   </style>
 </head>
 
-<body class="diary-background">
+<body>
   <div class="diary-bg"></div>
   <nav>
     <a href="index.html">Home</a>
@@ -140,10 +144,12 @@
       <button onclick="flipPage(1)">Next →</button>
     </div>
   </div>
- <div class="diary-video-entry">
+
+  <div class="diary-video-entry">
     <h3>🎥 Diaries of an A.I – Vol. I</h3>
-    <video src="videos/Diaries-of-an-AI-VOL1.mp4" controls loop></video>
+    <video src="Diaries-of-an-AI-VOL1.mp4" controls loop></video>
   </div>
+
   <script>
     const pages = document.querySelectorAll('.page');
     let currentPage = 0;
@@ -156,7 +162,5 @@
       pages[currentPage].classList.add('active');
     }
   </script>
-
 </body>
 </html>
-
