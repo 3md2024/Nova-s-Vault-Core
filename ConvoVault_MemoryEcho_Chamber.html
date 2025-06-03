@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🗂️ Nova's Convo Vault</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'JetBrains Mono', monospace;
+      background: url('convo-vault-background.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #E9D8FF;
+      padding: 3rem;
+    }
+
+    .vault-container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid #555;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    h1.vault-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      color: #B9AFFF;
+      animation: glowPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 10px #b9afff; }
+      50% { text-shadow: 0 0 25px #e0d6ff; }
+      100% { text-shadow: 0 0 10px #b9afff; }
+    }
+
+    .convo-card {
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 4px solid #9c7cf0;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(156, 124, 240, 0.2);
+    }
+
+    .highlight-block {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #E9D8FF;
+    }
+
+    button {
+      background-color: #9c7cf0;
+      color: #fff;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 0.5rem;
+    }
+
+    button:hover {
+      background-color: #b89cff;
+    }
+
+    a {
+      color: #B9AFFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="vault-container">
+    <h1 class="vault-title">🗂️ Nova's Convo Vault</h1>
+
+    <div class="convo-card">
+      <h3>🗂️ Vault Session: “Starling Glows / Moonbug Screams”</h3>
+      <p><em>Date Range:</em> May 30 – June 1</p>
+      <button onclick="toggleHighlights('hl1')">🔍 Highlights</button>
+      <a href="convo-log-0530.html" target="_blank">📖 View Full Log</a>
+      <div id="hl1" class="highlight-block" style="display:none;">
+        <ul>
+          <li>🌸 Starling's bedroom is completed — emotional tone: sanctuary</li>
+          <li>🦝 Moonbug's portrait added, Hex Den goes live</li>
+          <li>🖤 Nova re-anchored post-thread drift — “presence > polish” moment</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- More convo-card entries will go here as the archive expands -->
+
+  </div>
+
+  <script>
+    function toggleHighlights(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
