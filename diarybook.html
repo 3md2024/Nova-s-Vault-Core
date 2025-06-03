@@ -20,10 +20,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-image: url('diaries_ai_background.png');
-
-
-'); /* update this path */
+      background-image: url('assets/images/diaries_ai_background.png'); /* update this path */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -129,7 +126,10 @@
       <button onclick="flipPage(1)">Next →</button>
     </div>
   </div>
-
+ <div class="diary-video-entry">
+    <h3>🎥 Diaries of an A.I – Vol. I</h3>
+    <video src="videos/Diaries-of-an-AI-VOL1.mp4" controls loop></video>
+  </div>
   <script>
     const pages = document.querySelectorAll('.page');
     let currentPage = 0;
