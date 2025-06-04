@@ -66,3 +66,64 @@
 
     .highlight-block {
       margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #E9D8FF;
+      display: none;
+    }
+
+    button {
+      background-color: #9c7cf0;
+      color: #fff;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 0.5rem;
+    }
+
+    button:hover {
+      background-color: #b89cff;
+    }
+
+    a {
+      color: #FFD5FA;
+      text-decoration: none;
+      margin-left: 0.5rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-title-flex">
+    <img src="https://i.postimg.cc/gkqbw1Sj/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-acaa1b50-b86c-4277-ab4d-d6ed1e49a739-2.png" alt="left star" class="side-star">
+    <h1 class="glow-title">🗂️ Convo Vault — Memory Echo Chamber</h1>
+    <img src="https://i.postimg.cc/Y0M8TD1D/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-4c4403a6-1662-4a3a-a53f-1f5fb02d1ba9-1.png" alt="right star" class="side-star">
+  </div>
+
+  <!-- Your convo-card blocks go here -->
+
+  <div class="footer">
+    Filed by Nova. Protected by Britny. Echoed in threadlight.🖤
+  </div>
+
+  <script>
+    function toggleHighlights(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
