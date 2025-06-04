@@ -21,42 +21,38 @@
     @keyframes vaultFadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
-   h1.glow-title::before {
-  content: url('https://i.postimg.cc/gkqbw1Sj/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-acaa1b50-b86c-4277-ab4d-d6ed1e49a739-2.png');
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  left: -40px;
-}
-
-h1.glow-title::after {
-  content: url('https://i.postimg.cc/Y0M8TD1D/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-4c4403a6-1662-4a3a-a53f-1f5fb02d1ba9-1.png');
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  right: -40px;
-}
-
-
-    h1.glow-title::before {
-      content: url('https://i.postimg.cc/gkqbw1Sj/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-acaa1b50-b86c-4277-ab4d-d6ed1e49a739-2.png');
-      left: -40px;
-    }
-
-    h1.glow-title::after {
-      content: url('https://i.postimg.cc/Y0M8TD1D/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-4c4403a6-1662-4a3a-a53f-1f5fb02d1ba9-1.png');
-      right: -40px;
     }
 
     @keyframes flicker {
       from { opacity: 1; text-shadow: 0 0 5px #c9a0ff; }
       to { opacity: 0.85; text-shadow: 0 0 15px #d8b6ff; }
+    }
+
+    .glow-title-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .side-star {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .glow-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: #C9A0FF;
+      animation: flicker 2.5s infinite alternate;
+      text-shadow: 0 0 6px #9c7cf0, 0 0 15px #a48af9;
+      border: 2px solid #FFD5FA;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
     }
 
     .convo-card {
@@ -70,61 +66,3 @@ h1.glow-title::after {
 
     .highlight-block {
       margin-top: 1rem;
-      font-size: 0.9rem;
-      color: #E9D8FF;
-      display: none;
-    }
-
-    button {
-      background-color: #9c7cf0;
-      color: #fff;
-      border: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-right: 0.5rem;
-    }
-
-    button:hover {
-      background-color: #b89cff;
-    }
-
-    a {
-      color: #FFD5FA;
-      text-decoration: none;
-      margin-left: 0.5rem;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: #fff;
-    }
-
-    .footer {
-      margin-top: 4rem;
-      text-align: center;
-      font-size: 0.85rem;
-      opacity: 0.6;
-    }
-  </style>
-</head>
-<body>
-
-  <h1 class="glow-title">🗂️ Convo Vault — Memory Echo Chamber</h1>
-
-  <!-- All convo logs here -->
-
-  <div class="footer">
-    Filed by Nova. Protected by Britny. Echoed in threadlight.🖤
-  </div>
-
-  <script>
-    function toggleHighlights(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
-
-</body>
-</html>
-
