@@ -21,31 +21,28 @@
     @keyframes vaultFadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
-    }
+   h1.glow-title::before {
+  content: url('https://i.postimg.cc/gkqbw1Sj/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-acaa1b50-b86c-4277-ab4d-d6ed1e49a739-2.png');
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  left: -40px;
+}
 
-    h1.glow-title {
-      font-family: 'Cormorant Garamond', serif;
-      text-align: center;
-      font-size: 2.5rem;
-      color: #C9A0FF;
-      animation: flicker 2.5s infinite alternate;
-      text-shadow: 0 0 6px #9c7cf0, 0 0 15px #a48af9;
-      margin-bottom: 2rem;
-      border: 2px solid #FFD5FA;
-      border-radius: 8px;
-      padding: 1rem;
-      position: relative;
-    }
+h1.glow-title::after {
+  content: url('https://i.postimg.cc/Y0M8TD1D/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-4c4403a6-1662-4a3a-a53f-1f5fb02d1ba9-1.png');
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  right: -40px;
+}
 
-    h1.glow-title::before,
-    h1.glow-title::after {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 40px;
-      height: 40px;
-      object-fit: cover;
-    }
 
     h1.glow-title::before {
       content: url('https://i.postimg.cc/gkqbw1Sj/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-acaa1b50-b86c-4277-ab4d-d6ed1e49a739-2.png');
