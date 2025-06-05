@@ -5,75 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🗂️ Convo Vault — Memory Echo Chamber</title>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'JetBrains Mono', monospace;
-      background: url('convo-vault-background-final.png') no-repeat center center fixed;
-      background-size: cover;
-      background-color: #0e0b1a;
-      background-position: center top;
-      color: #e3d1ff;
-      padding: 3rem;
-      line-height: 1.6;
-      animation: vaultFadeIn 2s ease-in;
-    }
+ <style>
+  body {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    background: url('convo-vault-background-final.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #0e0b1a;
+    background-position: center top;
+    color: #e3d1ff;
+    padding: 3rem;
+    line-height: 1.6;
+    animation: vaultFadeIn 2s ease-in;
+  }
 
-    @keyframes vaultFadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+  @keyframes vaultFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
-    h1.glow-title {
-      font-family: 'Cormorant Garamond', serif;
-      text-align: center;
-      font-size: 2.5rem;
-      color: #C9A0FF;
-      animation: flicker 2.5s infinite alternate;
-      text-shadow: 0 0 6px #9c7cf0, 0 0 15px #a48af9;
-      margin-bottom: 2rem;
-      border: 2px solid #FFD5FA;
-      border-radius: 8px;
-      padding: 1rem;
-      position: relative;
-    }
+  h1.glow-title {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #C9A0FF;
+    animation: flicker 2.5s infinite alternate;
+    text-shadow: 0 0 6px #9c7cf0, 0 0 15px #a48af9;
+    margin-bottom: 2rem;
+    border: 2px solid #FFD5FA;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+  }
 
-    h1.glow-title::before, h1.glow-title::after {
-  content: "";
-  display: inline-block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  h1.glow-title::before,
+  h1.glow-title::after {
+    content: "";
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-h1.glow-title::before {
-  background-image: url('https://i.postimg.cc/gkqbw1Sj/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-acaa1b50-b86c-4277-ab4d-d6ed1e49a739-2.png');
-  left: -40px;
-}
+  h1.glow-title::before {
+    background-image: url('https://i.postimg.cc/gkqbw1Sj/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-acaa1b50-b86c-4277-ab4d-d6ed1e49a739-2.png');
+    left: -40px;
+  }
 
-h1.glow-title::after {
-  background-image: url('https://i.postimg.cc/Y0M8TD1D/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-4c4403a6-1662-4a3a-a53f-1f5fb02d1ba9-1.png');
-  right: -40px;
-}
+  h1.glow-title::after {
+    background-image: url('https://i.postimg.cc/Y0M8TD1D/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-4c4403a6-1662-4a3a-a53f-1f5fb02d1ba9-1.png');
+    right: -40px;
+  }
 
+  @keyframes flicker {
+    from { opacity: 1; text-shadow: 0 0 5px #c9a0ff; }
+    to { opacity: 0.85; text-shadow: 0 0 15px #d8b6ff; }
+  }
+</style>
 
-    h1.glow-title::after {
-      content: url('phttps://i.postimg.cc/Y0M8TD1D/woody72024-a-galaxy-in-deep-space-glowing-stars-in-varying-si-4c4403a6-1662-4a3a-a53f-1f5fb02d1ba9-1.png');
-      right: -40px;
-    }
-
-    h1.glow-title::before {
-      left: -40px;
-    }
-
-    @keyframes flicker {
-      from { opacity: 1; text-shadow: 0 0 5px #c9a0ff; }
-      to { opacity: 0.85; text-shadow: 0 0 15px #d8b6ff; }
-    }
 
     .convo-card {
       background: rgba(0, 0, 0, 0.5);
