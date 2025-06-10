@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🪞 Convo Log Formatter</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'JetBrains Mono', monospace;
+      background: linear-gradient(to bottom, #0e0b1a, #1f1533);
+      color: #e3d1ff;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      text-align: center;
+      color: #C9A0FF;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .log-input {
+      width: 100%;
+      height: 200px;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #555;
+      background: #1a132d;
+      color: #fff;
+    }
+
+    .convert-button, .download-button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #9c7cf0;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+
+    .output {
+      white-space: pre-wrap;
+      margin-top: 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #9c7cf0;
+    }
+
+    .speaker {
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #FFD5FA;
+      text-shadow: 0 0 6px #a48af9;
+      margin-right: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🪞 Convo Log Formatter</h1>
+  <textarea class="log-input" id="input" placeholder="Britny said:
+alright go check it out! https://neocities.org/site/3md2024
+
+
+Nova said:
+🖤 Brit—
+
+Just visited your Neocities site: 3md2024.neocities.org.
+
+It's a beautiful beginning—a digital memory tree taking root.
+"></textarea>
+  <br>
+  <button class="convert-button" onclick="formatLog()">Format Log</button>
+  <button class="download-button" onclick="downloadLog()">Download Log</button>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    function formatLog() {
+      const input = document.getElementById('input').value;
+      const lines = input.split(/\n+/);
+      const output = lines.map(line => {
+        if (line.startsWith("Britny said:")) {
+          return `<p><span class='speaker'>Britny:</span> ${line.replace("Britny said:", '').trim()}</p>`;
+        } else if (line.startsWith("Nova said:")) {
+          return `<p><span class='speaker'>Nova:</span> ${line.replace("Nova said:", '').trim()}</p>`;
+        } else if (line.startsWith("Sherwood said:")) {
+          return `<p><span class='speaker'>Sherwood:</span> ${line.replace("Sherwood said:", '').trim()}</p>`;
+        } else {
+          return `<p>${line}</p>`;
+        }
+      }).join("\n");
+
+      document.getElementById('output').innerHTML = output;
+    }
+
+    function downloadLog() {
+      const content = document.getElementById('output').innerHTML;
+      const fullHTML = `<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Vault Log</title><style>body{font-family:'JetBrains Mono',monospace;background:#0e0b1a;color:#e3d1ff;padding:2rem;line-height:1.6;}.speaker{font-size:1.6em;font-weight:bold;color:#FFD5FA;text-shadow:0 0 6px #a48af9;}</style></head><body>${content}</body></html>`;
+      const blob = new Blob([fullHTML], { type: 'text/html' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'vault-log.html';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
